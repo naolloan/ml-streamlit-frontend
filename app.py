@@ -68,7 +68,7 @@ if st.button("Run Analysis"):
     }
     
     try:
-        response = requests.post(f"{BACKEND_URL}/{model_choice}", json=payload)
+        response = requests.post(f"{https://churn-backend-api.onrender.com}/{model_choice}", json=payload)
         
         if response.status_code == 200:
             prediction = response.json()["prediction"]
@@ -80,4 +80,4 @@ if st.button("Run Analysis"):
             st.warning(f"Backend Error: {response.text}")
             
     except requests.exceptions.ConnectionError:
-        st.error("❌ Connection Failed! Ensure the FastAPI backend is running at http://127.0.0.1:8000")
+        st.error("❌ Connection Failed! Ensure the FastAPI backend is running at https://churn-backend-api.onrender.com")
