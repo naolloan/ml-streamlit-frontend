@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Local Backend URL
-BACKEND_URL = "http://127.0.0.1:8000/predict"
+BACKEND_URL = "https://churn-backend-api.onrender.com"
 
 # 1. CSS for Hand Pointers (applied to inputs and help icons)
 st.markdown("""
