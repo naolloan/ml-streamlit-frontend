@@ -68,7 +68,7 @@ if st.button("Run Analysis"):
     }
     
     try:
-        response = requests.post(f"{BACKEND_URL}/{model_choice}", json=payload)
+        response = requests.post(f"{BACKEND_URL}/predict/{model_choice}", json=payload)
         
         if response.status_code == 200:
             prediction = response.json()["prediction"]
