@@ -73,9 +73,9 @@ if st.button("Run Analysis"):
         if response.status_code == 200:
             prediction = response.json()["prediction"]
             if prediction == 1:
-                st.error("🚨 **Result:** Customer is likely to **CHURN**.")
+                st.error("**Result:** Customer is likely to **CHURN**.")
             else:
-                st.success("✅ **Result:** Customer is likely to **STAY**.")
+                st.success("**Result:** Customer is likely to **STAY**.")
         else:
             st.warning(f"Backend Error: {response.text}")
             
